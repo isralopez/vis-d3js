@@ -208,7 +208,7 @@ function ready(error,topo,csv){
   d3.csv("data/des_estatalT.csv", type, function(error, data) {
     if (error) throw error;
     
-    console.log(data)
+    console.log(d3.keys(data))
     x.domain(data.map(function(d) { return d.año; }));
     y.domain([0, d3.max(data, function(d) { return d.A; })]);
 
